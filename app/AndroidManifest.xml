@@ -1,1 +1,22 @@
+<manifest package="network.gyds">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:label="GYDS Lite Node"
+        android:icon="@mipmap/ic_launcher">
+
+        <service
+            android:name=".LiteNodeService"
+            android:foregroundServiceType="dataSync"/>
+        
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
 
